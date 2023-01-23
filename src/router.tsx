@@ -2,15 +2,16 @@ import Layout from "./Layout";
 import {Home} from "./components/Home";
 import {YouClickedMeNew} from "./components/YouClickedMeNew";
 import {YouClickedMeOld} from "./components/YouClickedMeOld";
-import {YouClickedMePure} from "./components/YouClickedMePure";
 import {YouClickedMeContainer} from "./components/YouClickedMeContainer";
 import {YouClickedMeContext} from "./components/YouClickedMeUseContext";
+import {YouClickedMeRedux} from "./components/YouClickedMeRedux";
 
 export const RouteNames = {
     YouClickedMeNew:'you-clicked-me-new',
     YouClickedMeOld:'you-clicked-me-old',
     YouClickedMeContainer:'you-clicked-me-pure',
     YouClickedMeContext:'you-clicked-me-context',
+    YouClickedMeRedux:'you-clicked-me-redux',
 }
 
 export const routes = [
@@ -37,6 +38,10 @@ export const routes = [
             {
                 element: <YouClickedMeContext />,
                 path: RouteNames.YouClickedMeContext,
+            },
+            {
+                element: <YouClickedMeRedux />,
+                path: RouteNames.YouClickedMeRedux,
             },
         ]
     }

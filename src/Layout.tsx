@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import {YouClickedMeContainer} from "./components/YouClickedMeContainer";
 import {Link, Outlet} from "react-router-dom";
 import {RouteNames} from "./router";
 import {NavMenu, NavMenuItem, NavMenuItems} from "./components/styles";
@@ -17,6 +16,7 @@ function Layout() {
                 <NavMenuItem><Link to={RouteNames.YouClickedMeOld}>Old Component Style</Link></NavMenuItem>
                 <NavMenuItem><Link to={RouteNames.YouClickedMeContainer}>Pure Component Style</Link></NavMenuItem>
                 <NavMenuItem><Link to={RouteNames.YouClickedMeContext}>Context Oriented Style</Link></NavMenuItem>
+                <NavMenuItem><Link to={RouteNames.YouClickedMeRedux}>Redux Oriented Style</Link></NavMenuItem>
             </NavMenuItems>
         </NavMenu>
         <main>
