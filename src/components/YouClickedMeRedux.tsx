@@ -12,7 +12,7 @@ export function YouClickedMeRedux() {
     //     // Safe to add dispatch to the dependencies array
     // }, [dispatch]);
 
-    const clicked = useSelector((state: Record<string, any>) => state.clicked)
+    const count = useSelector((state: Record<string, any>) => state.count)
 
     const updateClickCount = useCallback(
         () => dispatch({ type: UPDATE_CLICK_COUNT, count: 1 }),
@@ -20,6 +20,6 @@ export function YouClickedMeRedux() {
     )
 
     return <Container>
-        <YouClickedMePure clicked={clicked} callClicked={updateClickCount} />
+        <YouClickedMePure clicked={count} callClicked={updateClickCount} />
     </Container>
 }
