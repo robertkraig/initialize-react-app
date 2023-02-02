@@ -1,12 +1,20 @@
 import { combineReducers } from 'redux'
 import { UPDATE_CLICK_COUNT } from "../actions";
 
-const updateClickCount = (state = { count: 0 }, action: Record<string, any>) => {
+export interface MyState {
+    count: number;
+}
+
+export interface MyAction extends MyState {
+    type: `${UPDATE_CLICK_COUNT}`,
+}
+
+const updateClickCount = (state: MyState = { count: 0 }, action: MyAction) => {
     switch (action.type) {
         case UPDATE_CLICK_COUNT:
             return {
                 ...state,
-                count: state.count + action.count
+                count: state.count + action.count,
             };
         default:
             return state
